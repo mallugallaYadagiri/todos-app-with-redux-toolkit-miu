@@ -88,13 +88,20 @@ function Todos() {
 
   return (
     <Box
+      sm
       sx={{
-        border: "2px solid white",
         width: "45%",
+        border: "2px solid white",
         height: "auto",
         backgroundColor: "primary.light",
         borderRadius: "1em",
         m: 1,
+        "@media (max-width: 960px)": {
+          width: "70%",
+        },
+        "@media (max-width: 600px)": {
+          width: "100%",
+        },
       }}
     >
       <Typography
@@ -116,7 +123,12 @@ function Todos() {
           variant="contained"
           onClick={() => handleModalOpen(null)}
           color="success"
-          sx={{ width: "10em", p: 1.5, fontSize: "1em", fontWeight: "bold" }}
+          sx={{
+            width: "10em",
+            p: 1.5,
+            fontSize: "1em",
+            fontWeight: "bold",
+          }}
         >
           Add Task
         </Button>
@@ -183,6 +195,12 @@ function Todos() {
             flexDirection: "column",
             justifyContent: "space-between",
             alignItems: "center",
+            "@media (max-width: 960px)": {
+              width: "50%",
+            },
+            "@media (max-width: 600px)": {
+              width: "95%",
+            },
           }}
         >
           <Typography variant="h6" textTransform="uppercase" fontWeight="bold">
